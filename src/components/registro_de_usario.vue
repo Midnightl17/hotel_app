@@ -12,28 +12,28 @@
   <br>
     <label for="name">Nombre:</label>
     <input type="text" id="name" name="user_name">
-  </br>
-  <br>
+  <br/>
+  <br/>
     <label for="apellido">Apellido:</label>
     <input type="text" id="apellido" name="user_apellido">
-  </br>
-  <br>
+  <br/>
+  <br/>
     <label for="edad">Edad:</label>
     <input type="number" id="edad" name="user_edad">
-  </br>
-  <br>
+  <br/>
+  <br/>
     <label for="contraseña">Contraseña:</label>
     <input type="password" id="contraseña" name="user_contraseña">
-  </br>
-  <br>
+  <br/>
+  <br/>
     <label for="telefono">Telefono:</label>
     <input type="number" id="telefono" name="user_telefono">
-  </br>
+  <br/>
 
-  <br>
+  <br/>
     <label for="direccion">Direccion:</label>
     <input type="text" id="direccion" name="user_direccion">
-  </br>
+  <br/>
   <div>
     <label for="idioma">Idioma:</label>
     <select name="my_html_select_box">
@@ -52,8 +52,7 @@
 </template>
 
 <script>
-export default {
-}
+export default {};
 </script>
 
 <style>
@@ -67,7 +66,7 @@ form {
   width: 600px;
   /* Esquema del formulario */
   padding: 1em;
-  border: 1px solid #CCC;
+  border: 1px solid #ccc;
   border-radius: 1em;
 }
 
@@ -84,7 +83,7 @@ label {
   text-align: right;
 }
 
-input, 
+input,
 textarea {
   /* Para asegurarse de que todos los campos de texto tienen la misma configuración de letra
      Por defecto, las áreas de texto tienen un tipo de letra monoespaciada */
@@ -107,6 +106,4 @@ button {
      entre las etiquetas y sus campos de texto */
   margin-left: 12.5em;
 }
-
-
 </style>
