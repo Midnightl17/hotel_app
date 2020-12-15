@@ -1,12 +1,17 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld/>
-  </div>
+  <div> <registroUsario></div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
+import registroUsario from './components/registro_de_usuario'
+export default {
+  name: 'App',
+  components: {
+    registroUsario
+  }
+}
+</script>
+
 
 export default {
   name: 'App',
