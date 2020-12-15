@@ -1,29 +1,22 @@
 <template>
-  <div> <registroUsario></div>
+  <div> 
+    <registroUsario/>
+  </div>
 </template>
 
 <script>
-import registroUsario from './components/registro_de_usuario'
+import registroUsario from "./components/registro_de_usario"
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    registroUsario
-  }
-}
-</script>
-
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+    registroUsario,
+  },
+};
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
