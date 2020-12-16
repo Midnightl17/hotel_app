@@ -1,15 +1,18 @@
 <template>
   <div> 
-    <registroUsario/>
+    <!--<registroUsario/>-->
+    <ingresoUsuario/>
   </div>
 </template>
 
 <script>
-import registroUsario from "./components/registro_de_usario"
+import registroUsario from "./components/registro_de_usario";
+import ingresoUsuario from "./components/ingreso_de_usuario";
 export default {
   name: "App",
   components: {
     registroUsario,
+    ingresoUsuario,
   },
 };
 </script>
