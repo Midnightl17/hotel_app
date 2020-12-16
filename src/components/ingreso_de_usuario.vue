@@ -39,11 +39,6 @@ export default {};
   --input-padding-y: 0.75rem;
 }
 
-body {
-  background: #023047;
-  background: linear-gradient(to right, #caf0f8, #00b4d8);
-}
-
 .card-signin {
   border: 0;
   border-radius: 0.5rem;
