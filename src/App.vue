@@ -1,19 +1,24 @@
 <template>
-  <div> 
+  <div class="app">
     <!--<registroUsario/>-->
-    <ingresoUsuario/>
+    <!--<ingresoUsuario/>-->
+    <administrador/>
   </div>
 </template>
 
 <script>
 import registroUsario from "./components/registro_de_usario";
 import ingresoUsuario from "./components/ingreso_de_usuario";
+import administrador from "./components/admi";
 export default {
   name: "App",
   components: {
     registroUsario,
     ingresoUsuario,
+    administrador,
   },
+
+  
 };
 </script>
 
