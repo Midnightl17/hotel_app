@@ -9,9 +9,10 @@
             </div>
             <div class="card-body">
               <h5 class="card-title text-center">Registro de usuario</h5>
-              <form class="form-signin">
+              <form v-on:submit.prevent="register" class="form-signin">
                 <div class="form-label-group">
                   <input
+                    v-model="username"
                     type="text"
                     id="inputUserame"
                     class="form-control"
@@ -24,6 +25,7 @@
 
                 <div class="form-label-group">
                   <input
+                    v-model="nombre"
                     type="text"
                     id="inputName"
                     class="form-control"
@@ -35,6 +37,7 @@
 
                 <div class="form-label-group">
                   <input
+                    v-model="apellido"
                     type="text"
                     id="inputLastname"
                     class="form-control"
@@ -46,6 +49,7 @@
 
                 <div class="form-label-group">
                   <input
+                    v-model="email"
                     type="email"
                     id="inputEmail"
                     class="form-control"
@@ -59,6 +63,7 @@
 
                 <div class="form-label-group">
                   <input
+                    v-model="telefono"
                     type="tel"
                     id="inputTel"
                     class="form-control"
@@ -70,6 +75,7 @@
 
                 <div class="form-label-group">
                   <input
+                    v-model="edad"
                     type="number"
                     id="inputEdad"
                     class="form-control"
@@ -80,7 +86,7 @@
                 </div>
                 
                 <div class="form-label-group">
-                    <select class="form-control slidioma" id="idiomas">
+                    <select v-model="idioma" class="form-control slidioma" id="idiomas">
                       <option>Español</option>
                       <option>Inglés</option>
                       <option>Portugués</option>
@@ -92,6 +98,7 @@
 
                 <div class="form-label-group">
                   <input
+                    v-model="password"
                     type="password"
                     id="inputPassword"
                     class="form-control"
@@ -129,7 +136,39 @@
 </template>
 
 <script>
-export default {};
+import axios from "axios"
+export default {
+  data: function(){
+    return {
+      username: "",
+      nombre: "",
+      apellido: "",
+      email: "",
+      telefono: 0,
+      edad: 0,
+      idioma: "",
+      password: "",
+    }
+  },
+  methods: {
+    register: function(){
+      let json = {
+        "username": this.username,
+        "nombre": this.nombre,
+        "apellido": this.apellido,
+        "email": this.email,
+        "telefono": this.telefono,
+        "edad": this.edad,
+        "idioma": this.idioma,
+        "password": this.password,
+      };
+      axios.post('http://127.0.0.1:8000/post_cliente', json)
+      .then( data =>{
+        console.log(data);
+      })
+    }
+  }
+};
 </script>
 
 <style>

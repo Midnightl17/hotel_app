@@ -8,19 +8,21 @@
           </div>
           <div class="card-body">
             <h5 class="card-title text-center">Ingresar</h5>
-            <form class="form-signin" action="" method="post">
+
+            <form v-on:submit.prevent="loginn" class="form-signin" action="" method="get">
               <div class="form-label-group">
-                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required/>
-                <label for="inputEmail">Correo electronico</label>
+                <input v-model="UserName" type="text" id="inputUserName" class="form-control" placeholder="UserName" required/>
+                <label for="inputUserName">Usuario</label>
               </div>
 
               <div class="form-label-group">
-                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required/>
+                <input v-model="Password" type="password" id="inputPassword" class="form-control" placeholder="Password" required/>
                 <label for="inputPassword">Contraseña</label>
               </div>
 
               <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Ingresar</button>
-              <a class="d-block text-center mt-2 small" href="#">Registrarme</a>
+              <router-link class="d-block text-center mt-2 small" to="/register">Registrarme</router-link>
+
             </form>
           </div>
         </div>
@@ -30,7 +32,27 @@
 </template>
 
 <script>
-export default {};
+import axios from "axios";
+export default {
+    
+    data: function(){
+        return{
+            UserName: "",
+            Password: "",
+        }
+    },
+    methods: {
+        loginn: function(){
+            let arjson = {
+                "username": this.UserName,
+            };
+            axios.get('http://127.0.0.1:8000/get_cliente/' + this.UserName)
+            .then( data =>{
+                console.log(data);
+            })
+        },
+    },
+};
 </script>
 
 <style>
