@@ -47,7 +47,7 @@ export default {
                 "username": this.UserName,
                 "password": this.Password
             };
-            axios.post('https://pomboelmejor.herokuapp.com/post_auth_cliente/', arjson)
+            axios.post('https://hotelg1m32backend.herokuapp.com/post_auth_cliente/', arjson)
             .then( data => console.log(data))
         },
     },
