@@ -162,7 +162,7 @@ export default {
         "idioma": this.idioma,
         "password": this.password,
       };
-      axios.post('http://127.0.0.1:8000/post_cliente/', json)
+      axios.post('https://pomboelmejor.herokuapp.com/post_cliente/', json)
       .then( data =>{
         console.log(data);
         console.log(json);
