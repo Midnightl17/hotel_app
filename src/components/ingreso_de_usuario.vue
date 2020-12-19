@@ -45,11 +45,10 @@ export default {
         loginn: function(){
             let arjson = {
                 "username": this.UserName,
+                "password": this.Password
             };
-            axios.get('http://127.0.0.1:8000/get_cliente/' + this.UserName)
-            .then( data =>{
-                console.log(data);
-            })
+            axios.post('http://127.0.0.1:8000/post_auth_cliente/', arjson)
+            .then( data => console.log(data))
         },
     },
 };
